@@ -1,0 +1,12 @@
+from selenium import webdriver
+print("Enter your e-mail id\n")
+eMail=input()
+print("Enter your password\n")
+passw=input()
+browser=webdriver.Chrome()
+browser.get('http://facebook.com')
+emailElem=browser.find_element_by_id('email')
+emailElem.send_keys(eMail)
+passwordElem=browser.find_element_by_id('pass')
+passwordElem.send_keys(passw)
+passwordElem.submit()
